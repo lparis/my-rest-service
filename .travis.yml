@@ -1,5 +1,14 @@
 language: java
 
+sudo: enabled
+
+install: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script: mvn clean package
 
-after_success: sl analyze
+cache:
+  directories:
+    - ~/.m2/repository
+    - ~/.shiftleft
+
+after_success:
+  - ./travis/deploy.sh
