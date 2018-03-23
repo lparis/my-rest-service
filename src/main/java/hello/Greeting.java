@@ -1,4 +1,4 @@
-// The Greeting class models the greeting representation. 
+// Greeting class models the greeting representation. 
 // Greeting POJO has fields, constructors, and accessors for `id` and content data.
 
 package hello;
